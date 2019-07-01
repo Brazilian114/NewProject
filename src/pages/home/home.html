@@ -23,14 +23,18 @@
         
         
         <button ion-button block (click)="loginn('top')">เข้าสู่ระบบ</button>
+        <ion-card no-lines *ngFor="let item of brazilian" (click)="showData(item)" style="border-radius:10px;">
+        
+            <h5>Username</h5><p>  {{item.a}} {{item.b}}</p>
+            <h5>Address</h5><p>  {{item.ph}}</p>
+       
+        </ion-card>
+      
         <div class="regis">
         <a>ยังไม่มีบัญชีผู้ใช้งาน?<u (click)="click()">ลงทะเบียน</u></a>
       </div>
 
-      <!---<ion-item no-lines *ngFor="let item of brazilian" text-center>
-        {{ item.a }} {{ item.b }}
-      </ion-item>
-    -->
+     
     <!--  <ion-list >
           
           <ion-item  >

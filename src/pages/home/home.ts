@@ -12,6 +12,7 @@ import { Storage } from '@ionic/storage';
 
 //import 'rxjs/add/operator/map'; 
 import { Http } from '@angular/http';
+import { SecondPage } from '../second/second';
 
 
 
@@ -20,16 +21,16 @@ import { Http } from '@angular/http';
   templateUrl: 'home.html'
 })
 export class HomePage { 
-/*
+
     brazilian = [
-      {a:'koravit',b:'mahamad'},
-      {a:'somchai',b:'thongdee'},
-      {a:'somchit',b:'thongmon'},
-      {a:'sombat',b:'thongpoo'},
-      {a:'chitlom',b:'thongshit!'},
+      {a:'koravit',b:'mahamad',ph:'084456987'},
+      {a:'somchai',b:'thongdee',ph:'0664997885'},
+      {a:'somchit',b:'thongmon',ph:'033669844'},
+      {a:'sombat',b:'thongpoo',ph:'0889636985'},
+      {a:'chitlom',b:'thongshit!',ph:'027778855'},
 
     ] 
-*/
+
   resposeData : any;
   userData = {"username":"","password":""};
 
@@ -47,7 +48,11 @@ export class HomePage {
   
   }
 
- 
+ showData(item){
+   //alert(item.a + item.b);
+   this.navCtrl.push("SecondPage",item);
+   console.log(item);
+ }
   
   loginn(position: string){
     if(this.userData.username && this.userData.password){
