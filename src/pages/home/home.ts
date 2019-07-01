@@ -20,7 +20,7 @@ import { Http } from '@angular/http';
   templateUrl: 'home.html'
 })
 export class HomePage { 
-
+/*
     brazilian = [
       {a:'koravit',b:'mahamad'},
       {a:'somchai',b:'thongdee'},
@@ -29,7 +29,7 @@ export class HomePage {
       {a:'chitlom',b:'thongshit!'},
 
     ] 
-
+*/
   resposeData : any;
   userData = {"username":"","password":""};
 
