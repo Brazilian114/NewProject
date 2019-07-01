@@ -1,0 +1,55 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content  padding id="home">
+    <b><h1>
+        Carcare
+    </h1></b>
+    <ion-list >
+        
+          <ion-item no-lines>
+           
+            <ion-input  placeholder="อีเมล์" type="text" name="username" [(ngModel)]="userData.username"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            
+            <ion-input   placeholder="รหัสผ่าน "type="password" name="password"[(ngModel)]="userData.password"></ion-input>
+          </ion-item>
+        
+         
+        </ion-list>
+        
+        
+        <button ion-button block (click)="loginn('top')">เข้าสู่ระบบ</button>
+        <div class="regis">
+        <a>ยังไม่มีบัญชีผู้ใช้งาน?<u (click)="click()">ลงทะเบียน</u></a>
+      </div>
+
+      <ion-item no-lines *ngFor="let item of brazilian" text-center>
+        {{ item.a }} {{ item.b }}
+      </ion-item>
+
+    <!--  <ion-list >
+          
+          <ion-item  >
+              <ion-input  round type="text" placeholder="Username" name="username" #username></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" #password></ion-input>
+            </ion-item>
+          
+            
+  
+          </ion-list>
+          
+          
+          <button ion-button block (click)="sign()">เข้าสุ่ระบบ</button>
+          <a>ไม่มีบัญชีผู้ใช้งาน?<u (click)="click()">ลงทะเบียน</u></a>
+     
+        
+        --> 
+  
+</ion-content>
