@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform ,PopoverController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { SecondPage} from '../pages/second/second';
 import { RegisterPage } from '../pages/register/register';
 import { MainPage } from '../pages/main/main';
 import { QueuePage } from '../pages/queue/queue';

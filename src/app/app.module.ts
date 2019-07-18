@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule} from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { SecondPage } from '../pages/second/second';
+//import { SecondPage } from '../pages/second/second';
 
 import { QueuePage } from '../pages/queue/queue';
 import { MainPage } from '../pages/main/main';
@@ -43,7 +43,7 @@ import { IonicStorageModule } from '@ionic/storage';
     //Popup2Page
     //ProfilePage,
     ManualPage,
-   
+   //SecondPage
     //ContentPage
     
     
@@ -74,6 +74,7 @@ import { IonicStorageModule } from '@ionic/storage';
     //Popup2Page
     //ProfilePage,
     ManualPage,
+    //SecondPage
     
     //ContentPage
     

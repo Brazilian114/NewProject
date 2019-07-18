@@ -1,5 +1,5 @@
 import { Component,ViewChild} from '@angular/core';
-import { NavController,ToastController,AlertController,ViewController,LoadingController} from 'ionic-angular';
+import { NavController,ToastController,AlertController,ViewController,LoadingController,NavParams} from 'ionic-angular';
 
 import { RegisterPage } from '../register/register';
 import { MainPage } from '../main/main';
@@ -30,28 +30,39 @@ export class HomePage {
       {a:'chitlom',b:'thongshit!',ph:'027778855'},
 
     ] 
-
+    posts:{
+      number1:string,
+      number2:string,
+      number3:string,
+    }
   resposeData : any;
   userData = {"username":"","password":""};
-
+  number1:string
+  number2:string;
+  number3:string;
   public items : any = [];
   
 
- constructor(private loading : LoadingController,private viewCtrl: ViewController, public http:Http ,public navCtrl: NavController,private toastCtrl:ToastController,
+ constructor(private loading : LoadingController,private viewCtrl: ViewController, public http:Http ,public navParams: NavParams,public navCtrl: NavController,private toastCtrl:ToastController,
   private alert:AlertController,private auth:LoginProvider )  {
-   
+    const data = JSON.parse(localStorage.getItem('deviceNum'));
+    //this.items = data.deviceNum; 
+    
     
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+    this.posts = this.navParams.get("posts");
+    console.log(this.posts);
+    
   
   }
 
  showData(item){
    //alert(item.a + item.b);
    this.navCtrl.push("SecondPage",item);
-   console.log(item);
+   //console.log(item);
  }
   
   loginn(position: string){

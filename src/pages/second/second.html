@@ -14,9 +14,89 @@
 
 
 <ion-content>
+<!----
+  <h2>You Profile</h2>
+  <ul>
+    <li>Name: {{name}}</li>
+    <li>Age: {{age}}</li>
+    <li>Email: {{email}}</li>
+  </ul>
+  <h2>Edit You profile</h2>
+    <ul>
+      <li>Name: <input [(ngModel)]="name"></li>
+      <li>Age: <input [(ngModel)]="age"></li>
+      <li>Email: <input [(ngModel)]="email"></li>
+    </ul>
+
+  <form (submit)="addSkill(skill.value)">
+    <div>
+      <label for="skill">Skill:</label>
+      <input type="text" #skill placeholder="Add your skill">
+    </div>
+  </form>
+
+
+  <h2>Skills</h2>
+    <ul>
+      <li style="list-style-type: none" *ngFor="let skill of skills; let i = index">{{i+1}}. {{skill}} <button (click)="removeSkill(skill)">X</button></li>
+    </ul>
+    
+  <h2>List</h2>
+ <ion-item *ngFor="let item of items?.articles" (click)="content(item)" >
+  <p><b>ID</b>: {{item.title}}</p>
+  <p><b>Title</b>: {{item.author}}</p>
+  <p><b>Completed</b>: {{item.description}}</p>
+ </ion-item>
+
+  <ion-infinite-scroll threshold="150px" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubble" loadingText="Loading..">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+-->
 
     <ion-item>
       <h5>Contacts</h5> <p>{{item.ph}}</p>
     </ion-item>
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="posts.number1" placeholder="Input Number1">
+        
+      </ion-input>
+    </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="posts.number2"placeholder="Input Number2">
+          
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="posts.number3"placeholder="Input Number3">
+        
+      </ion-input>
+  </ion-item>
+
+          <button ion-button block (click)="checknum();">
+            Check Number
+          </button>
+          <button ion-button block (click)="checkGrade();">
+            Check Grade
+          </button>
+          <button ion-button block (click)="sendBack(item);">
+            Return Value
+          </button>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </ion-content>
