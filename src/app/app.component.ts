@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { ManualPage } from '../pages/manual/manual';
 import { CanclePage } from '../pages/cancle/cancle';
 import { ContentPage } from '../pages/content/content';
+import { ChartPage } from '../pages/chart/chart';
 
 //import { TranslateService } from '@ngx-translate/core';
 
@@ -23,7 +24,7 @@ import { ContentPage } from '../pages/content/content';
 })
 export class MyApp {
 
-  rootPage:any = HomePage;
+  rootPage:any = ChartPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     

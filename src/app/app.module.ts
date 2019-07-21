@@ -16,6 +16,7 @@ import { RegisterPage } from '../pages/register/register';
 import { CanclePage } from '../pages/cancle/cancle';
 import { PopupPage } from '../pages/popup/popup';
 import { ManualPage } from '../pages/manual/manual';
+import { ChartPage } from '../pages/chart/chart';
 //import { ContentPage } from '../pages/content/content';
 //import { Popup2Page } from '../pages/popup2/popup2';
 import { MomentModule } from 'angular2-moment';
@@ -43,6 +44,7 @@ import { IonicStorageModule } from '@ionic/storage';
     //Popup2Page
     //ProfilePage,
     ManualPage,
+    ChartPage
    //SecondPage
     //ContentPage
     
@@ -74,6 +76,7 @@ import { IonicStorageModule } from '@ionic/storage';
     //Popup2Page
     //ProfilePage,
     ManualPage,
+    ChartPage
     //SecondPage
     
     //ContentPage

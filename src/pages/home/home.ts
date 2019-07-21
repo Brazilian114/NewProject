@@ -3,7 +3,7 @@ import { NavController,ToastController,AlertController,ViewController,LoadingCon
 
 import { RegisterPage } from '../register/register';
 import { MainPage } from '../main/main';
-
+import { ChartPage } from '../chart/chart';
 import { LoginProvider } from '../../providers/login/login';
 import { Storage } from '@ionic/storage';
 
@@ -105,8 +105,9 @@ export class HomePage {
 
   click(){
      this.navCtrl.push(RegisterPage);
-
-
+  }
+  chart(){
+    this.navCtrl.push(ChartPage);
   }
   main(){
     this.navCtrl.setRoot(MainPage);
