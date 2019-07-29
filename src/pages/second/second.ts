@@ -32,6 +32,7 @@ export class SecondPage {
   //data: any[] = Array();
   item ={a:'',b:'',ph:''};
   constructor(public navCtrl: NavController, public navParams: NavParams, public http : Http, public Modal: ModalController) {
+   this.load2();
     //this.loadMoreNews();
     this.posts = {
       number1 :'',
@@ -45,10 +46,10 @@ export class SecondPage {
   ionViewWillEnter()
   {
     this.initializeItems();
-
+   
 
      {
-     //this.load2();
+     this.load2();
      
     
       
@@ -92,7 +93,7 @@ export class SecondPage {
     });
   }
 
-  /*load2()
+  load2()
   {
      this.http.get('https://jsonplaceholder.typicode.com/todos')
      .map(res => res.json())
@@ -103,8 +104,8 @@ export class SecondPage {
            
      });
   }
-*/
 /*
+
   load2()
   {
      this.http.get('https://newsapi.org/v2/everything?q=bitcoin&from=2019-06-11&sortBy=publishedAt&apiKey=42b803126c7e45bc9798305b2e72a1f7')
@@ -131,33 +132,20 @@ export class SecondPage {
     // this.navCtrl.push(modal);
     modal.present();
   }
-/*
-  loadMoreNews(infiniteScroll?){
-    
-    
-    this.http.get('https://newsapi.org/v2/everything?q=bitcoin&from=2019-06-11&sortBy=publishedAt&apiKey=42b803126c7e45bc9798305b2e72a1f7')
-    
-    .subscribe(data => 
-    {
-      console.log(data);
-      this.items = this.items.concat(['article']);    
-      if(infiniteScroll){
-        infiniteScroll.complete();
-      }
-      
+
+
+  doInfinite(infiniteScroll) {
+
+    this.http.get('https://jsonplaceholder.typicode.com/todos')
+    .map(res => res.json())
+    .subscribe(data => {
+       this.items = this.items.concat(data);    
+       infiniteScroll.complete();
     });
-    
+
   }
 
-  loadMore(infiniteScroll){
-    this.page++;
-    this.loadMoreNews(infiniteScroll)
 
-    if(this.page == this.maximumPages){
-      infiniteScroll.enable(false);
-    }
-  }
-*/
     checknum(){
       var a;
       var b;

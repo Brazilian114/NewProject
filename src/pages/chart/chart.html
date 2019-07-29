@@ -8,7 +8,7 @@
 
 <ion-content>
   
- 
+ {{sum}}
   <div class="ion-padding">
 
       <ion-card>
@@ -20,16 +20,33 @@
           </ion-card-content>
         </ion-card>
  
-    <ion-card>
-      <ion-card-header>
-        Doughnut Chart
-      </ion-card-header>
-      <ion-card-content>
-        <div style="display:block;">
-        <canvas #doughnutCanvas></canvas>
-      </div>
-      </ion-card-content>
-    </ion-card>
+  
 
   </div>
+
+  <ion-list >  
+  
+       
+          <ion-card *ngFor="let item of item3">
+            <ion-card-header>
+              ID : {{item.booking_service_id}}
+            </ion-card-header>
+            <ion-card-content class="fix-line">
+              NAME : {{item.service_name}}<br>
+              PRICE : {{item.service_price}}
+            </ion-card-content>
+          </ion-card>
+        
+  </ion-list>
+
+  <ion-card *ngIf="noRecord">
+    <ion-item>
+      No Records
+    </ion-item>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
 </ion-content>
