@@ -15,7 +15,7 @@ import { ManualPage } from '../pages/manual/manual';
 import { CanclePage } from '../pages/cancle/cancle';
 import { ContentPage } from '../pages/content/content';
 import { ChartPage } from '../pages/chart/chart';
-
+import { GalleryPage } from '../pages/gallery/gallery';
 //import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -24,7 +24,7 @@ import { ChartPage } from '../pages/chart/chart';
 })
 export class MyApp {
 
-  rootPage:any = ChartPage;
+  rootPage:any = HomePage 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     

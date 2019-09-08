@@ -51,7 +51,9 @@ export class MainPage {
     this.initializeItems();
   }
  
- 
+ ionViewWillEnter(){
+  this.getQueue();
+ }
   initializeItems() {
     this.items =this.posts;
   }
@@ -77,6 +79,8 @@ export class MainPage {
     this.loginCtrl.postData(this.userPostData, "queue").then(
     result => {
        this.resposeData = result;
+       console.log(this.resposeData);
+       
        if (this.resposeData.queueData) {
           
           this.dataSet = this.resposeData.queueData;
