@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+//import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 /**
  * Generated class for the GalleryPage page.
  *
@@ -15,13 +15,14 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 })
 export class GalleryPage {
 photos:any;
-  constructor(private camera: Camera,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     //this.takePhoto(0);//photo library
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GalleryPage');
   }
+  /*
   TakeCamera() {
     const options: CameraOptions = {
       quality: 100,
@@ -36,6 +37,6 @@ photos:any;
     }, (err) => {
       console.log(err);
     });
-  }
+  }*/
 
 }

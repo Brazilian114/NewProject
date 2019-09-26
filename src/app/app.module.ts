@@ -7,7 +7,7 @@ import { HttpModule} from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 //import { SecondPage } from '../pages/second/second';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+//import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { QueuePage } from '../pages/queue/queue';
 import { MainPage } from '../pages/main/main';
 //import { ProfilePage } from '../pages/profile/profile';
@@ -94,7 +94,7 @@ import { IonicStorageModule } from '@ionic/storage';
     SplashScreen,LoginProvider,
     ServiceProvider,
     CommonProvider,
-    Camera,
+    //Camera,
     
     
     {provide: ErrorHandler, useClass: IonicErrorHandler},

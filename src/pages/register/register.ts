@@ -94,7 +94,7 @@ load2()
 }
 
   home(){
-    this.navCtrl.push(HomePage);
+    this.navCtrl.pop();
   }
 
   
@@ -111,8 +111,9 @@ load2()
           duration: 1900,
           position: position
         });
+        this.navCtrl.pop();
         toast.present();
-        this.navCtrl.push(HomePage);
+        
       
     localStorage.setItem('userData',JSON.stringify(this.resposeData))
     console.log("signup success");
